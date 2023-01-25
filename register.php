@@ -43,8 +43,7 @@
                     <strong>Hata!</strong> Kayit Yapilamadi Sistem Yöneticisine Danişiniz.
                 </div>
 
-            <?php }
-            ?>
+            <?php } ?>
 
 
             <form action="nedmin/netting/kullanici.php" method="POST" id="personal-info-form">

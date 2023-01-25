@@ -2,6 +2,18 @@
 require_once "header.php";
 
 islemkontrol();
+
+
+//Belirli veriyi seçme işlemi
+$urunsor = $db->prepare("SELECT * FROM urun where kullanici_id=:kullanici_id and urun_id=:urun_id order by urun_zaman DESC");
+$urunsor->execute(
+    array(
+        "kullanici_id" => $_SESSION["userkullanici_id"],
+        "urun_id" => $_GET["urun_id"]
+    )
+);
+
+$uruncek = $urunsor->fetch(PDO::FETCH_ASSOC);
 ?>
 
 
@@ -31,15 +43,22 @@ islemkontrol();
 
                     <div class="settings-details tab-content">
                         <div class="tab-pane fade active in" id="Personal">
-                            <h2 class="title-section">Urun Ekleme</h2>
+                            <h2 class="title-section">Urun Duzenle</h2>
                             <div class="personal-info inner-page-padding">
 
 
 
                                 <div class="form-group">
+                                    <label class="col-sm-3 control-label">Mevcut Fotograf</label>
+                                    <div class="col-sm-9">
+                                        <img width="300" src="<?php echo $uruncek["urunfoto_resimyol"] ?>" alt="resim">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
                                     <label class="col-sm-3 control-label">Fotograf</label>
                                     <div class="col-sm-9">
-                                        <input class="form-control" id="first-name" name="urunfoto_resimyol" required
+                                        <input class="form-control" id="first-name" name="urunfoto_resimyol"
                                             type="file">
                                     </div>
                                 </div>
@@ -59,7 +78,10 @@ islemkontrol();
 
                                                 while ($kategoricek = $kategorisor->fetch(PDO::FETCH_ASSOC)) { ?>
 
-                                                    <option value="<?php echo $kategoricek["kategori_id"] ?>"><?php echo $kategoricek["kategori_ad"] ?></option>
+                                                    <option <?php if ($kategoricek["kategori_id"] == $uruncek["kategori_id"]) {
+                                                        echo "selected";
+                                                    } ?>
+                                                        value="<?php echo $kategoricek["kategori_id"] ?>"><?php echo $kategoricek["kategori_ad"] ?></option>
 
                                                 <?php } ?>
 
@@ -74,7 +96,7 @@ islemkontrol();
                                     <label class="col-sm-3 control-label">Adi</label>
                                     <div class="col-sm-9">
                                         <input class="form-control" required id="first-name" name="urun_ad"
-                                            placeholder="Urun adi..." type="text">
+                                            value="<?php echo $uruncek["urun_ad"] ?>" type="text">
                                     </div>
                                 </div>
 
@@ -82,7 +104,7 @@ islemkontrol();
                                     <label class="col-sm-3 control-label">Aciklama</label>
                                     <div class="col-sm-9">
                                         <textarea class="ckeditor" id="editor1" name="urun_detay"
-                                            placeholder="Urun aciklamasi..."></textarea>
+                                            value="<?php echo $uruncek["urun_detay"] ?>"></textarea>
                                     </div>
                                 </div>
 
@@ -117,15 +139,19 @@ islemkontrol();
                                     <label class="col-sm-3 control-label">Fiyat</label>
                                     <div class="col-sm-9">
                                         <input class="form-control" required id="first-name" name="urun_fiyat"
-                                            placeholder="Urun fiyat..." type="text">
+                                            value="<?php echo $uruncek["urun_fiyat"] ?>" type="text">
                                     </div>
                                 </div>
 
 
+                                <input type="hidden" value="<?php echo $uruncek["urun_id"] ?>" name="urun_id">
+                                <input type="hidden" value="<?php echo $uruncek["urunfoto_resimyol"] ?>" name="eskiyol">
+
+
                                 <div align="right" class="form-group">
                                     <div class="col-sm-12">
-                                        <button class="update-btn" name="magazaurunekle" id="login-update">Urun
-                                            Ekle</button>
+                                        <button class="update-btn" name="magazaurunduzenle" id="login-update">Urun
+                                            Duzenle</button>
                                     </div>
                                 </div>
                             </div>
