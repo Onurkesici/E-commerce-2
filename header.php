@@ -107,6 +107,10 @@ if (isset($_SESSION["userkullanici_mail"])) {
     <!-- Modernizr Js -->
     <script src="js\modernizr-2.8.3.min.js"></script>
 
+   <!-- Ck Editor -->
+   <script src="nedmin/production/ckeditor/ckeditor.js"></script>
+
+
 </head>
 
 <body>

@@ -229,7 +229,7 @@ if (isset($_POST['kullaniciresimguncelle'])) {
 
 
 	$uniq = uniqid();
-	$refimgyol = substr($uploads_dir, 6) . "/" . $uniq .".". $ext;
+	$refimgyol = substr($uploads_dir, 6) . "/" . $uniq . "." . $ext;
 
 	@move_uploaded_file($tmp_name, "$uploads_dir/$uniq.$ext");
 
@@ -255,6 +255,84 @@ if (isset($_POST['kullaniciresimguncelle'])) {
 	} else {
 
 		Header("Location:../../profil-resim-guncelle.php?durum=hata");
+
+	}
+
+}
+
+
+if (isset($_POST['magazaurunekle'])) {
+
+	if ($_FILES['urunfoto_resimyol']['size'] > 1048576) {
+
+		echo "Bu dosya boyutu çok büyük";
+
+		Header("Location:../../urun-ekle.php?durum=dosyabuyuk");
+
+	}
+
+
+	$izinli_uzantilar = array('jpg', 'png');
+
+	//echo $_FILES['ayar_logo']["name"];
+
+	$ext = strtolower(substr($_FILES['urunfoto_resimyol']["name"], strpos($_FILES['urunfoto_resimyol']["name"], '.') + 1));
+
+	if (in_array($ext, $izinli_uzantilar) === false) {
+		echo "Bu uzanti kabul edilmiyor";
+		Header("Location:../../urun-ekle.php?durum=formathata");
+
+		exit;
+	}
+
+	@$tmp_name = $_FILES['urunfoto_resimyol']["tmp_name"];
+	@$name = $_FILES['urunfoto_resimyol']["name"];
+
+	include("SimpleImage.php");
+	$image = new SimpleImage();
+	$image->load($tmp_name);
+	$image->resize(829, 422);
+	$image->save($tmp_name);
+
+
+	$uploads_dir = '../../dimg/urunfoto';
+
+
+
+	$uniq = uniqid();
+	$refimgyol = substr($uploads_dir, 6) . "/" . $uniq . "." . $ext;
+
+	@move_uploaded_file($tmp_name, "$uploads_dir/$uniq.$ext");
+
+
+	$duzenle = $db->prepare("INSERT INTO urun SET
+		kategori_id=:kategori_id,
+		kullanici_id=:kullanici_id,
+		urun_ad=:urun_ad,
+		urun_detay=:urun_detay,
+		urun_fiyat=:urun_fiyat,
+		urun_fotoresimyol=:urun_fotoresimyol
+		");
+	$update = $duzenle->execute(
+		array(
+			"kategori_id" => htmlspecialchars($_POST["kategori_id"]),
+			"kullanici_id" => htmlspecialchars($_SESSION["userkullanici_id"]),
+			"urun_ad" => htmlspecialchars($_POST["urun_ad"]),
+			"urun_detay" => htmlspecialchars($_POST["urun_detay"]),
+			"urun_fiyat" => htmlspecialchars($_POST["urun_fiyat"]),
+			'urun_fotoresimyol' => $refimgyol
+		)
+	);
+
+
+
+	if ($update) {
+
+		Header("Location:../../urunlerim.php?durum=ok");
+
+	} else {
+
+		Header("Location:../../urun-ekle.php?durum=hata");
 
 	}
 

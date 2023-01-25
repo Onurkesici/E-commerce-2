@@ -25,11 +25,11 @@ $kategorisor->execute();
 
               if ($_GET['durum']=="ok") {?>
 
-              <b style="color:green;">İşlem Başarılı...</b>
+              <b style="color:green;">İşlem Başarili...</b>
 
               <?php } elseif ($_GET['durum']=="no") {?>
 
-              <b style="color:red;">İşlem Başarısız...</b>
+              <b style="color:red;">İşlem Başarisiz...</b>
 
               <?php }
 
@@ -48,7 +48,7 @@ $kategorisor->execute();
           <div class="x_content">
 
 
-            <!-- Div İçerik Başlangıç -->
+            <!-- Div İçerik Başlangiç -->
 
             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
               <thead>
@@ -86,7 +86,7 @@ $kategorisor->execute();
 
                   success -> yeşil
                   warning -> turuncu
-                  danger -> kırmızı
+                  danger -> kirmizi
                   default -> beyaz
                   primary -> mavi buton
 

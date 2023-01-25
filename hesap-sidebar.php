@@ -20,7 +20,7 @@
     <ul class="settings-title">
 
         <li class="active"><a href="javascript:void(0)" ><b>Magaza Islemleri</b></a></li>
-        <li><a href="magaza-basvuru" >Urun Ekle</a></li>
+        <li><a href="urun-ekle" >Urun Ekle</a></li>
         <li><a href="hesabim" >Urunlerim</a></li>
         <li><a href="adres-bilgileri" >Yeni Siparisler</a></li>
         <li><a href="sifre-guncelle" >Tamamlanan Siparisler</a></li>
