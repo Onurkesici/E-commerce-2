@@ -254,7 +254,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 yenigelenler plugins">
                     <div class="single-item-grid">
                         <div class="item-img">
-                            <img src="<?php echo $uruncek["urunfoto_resimyol"] ?>" alt="product" class="img-responsive">
+                            <a href="urun-<?=seo($uruncek["urun_ad"])."-".$uruncek["urun_id"] ?> "><img src="<?php echo $uruncek["urunfoto_resimyol"] ?>" alt="product" class="img-responsive"></a>
                             <div class="trending-sign" data-tips="One Cikan Urun"><i class="fa fa-bolt"
                                     aria-hidden="true"></i>
                             </div>
@@ -265,7 +265,7 @@
                                         <?php echo $uruncek["urun_ad"] ?>
                                     </a></h3>
                                 <span>
-                                    <?php echo $uruncek["kategori_ad"] ?>
+                                    <a href="kategori-<?=seo($uruncek["kategori_ad"])."-".$uruncek["kategori_id"] ?>"><?php echo $uruncek["kategori_ad"] ?> </a>
                                 </span>
                                 <div class="price">
                                     <?php echo $uruncek["urun_fiyat"] ?>TL
