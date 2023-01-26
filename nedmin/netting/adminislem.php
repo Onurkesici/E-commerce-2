@@ -475,4 +475,37 @@ if ($_GET['urunsil']=="ok") {
 	}
 
 }
+
+
+if (isset($_POST['kategoriduzenle'])) {
+
+	$kategori_id=$_POST['kategori_id'];
+	$kategori_seourl=seo($_POST['kategori_ad']);
+
+	
+	$kaydet=$db->prepare("UPDATE kategori SET
+		kategori_ad=:ad,
+		kategori_durum=:kategori_durum,	
+		kategori_seourl=:seourl,
+		kategori_onecikar=:kategori_onecikar,
+		kategori_sira=:sira
+		WHERE kategori_id={$_POST['kategori_id']}");
+	$update=$kaydet->execute(array(
+		'ad' => htmlspecialchars($_POST['kategori_ad']) ,
+		'kategori_durum' => htmlspecialchars($_POST['kategori_durum']),
+		'seourl' => $kategori_seourl,
+		'kategori_onecikar' => htmlspecialchars($_POST["kategori_onecikar"]),
+		'sira' => $_POST['kategori_sira']		
+	));
+
+	if ($update) {
+
+		Header("Location:../production/kategori-duzenle.php?durum=ok&kategori_id=$kategori_id");
+
+	} else {
+
+		Header("Location:../production/kategori-duzenle.php?durum=no&kategori_id=$kategori_id");
+	}
+
+}
 ?>

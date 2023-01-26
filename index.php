@@ -19,300 +19,12 @@
     </div>
 </div>
 <!-- Main Banner 1 Area End Here -->
-<!-- Newest Products Area Start Here -->
-<div class="newest-products-area bg-secondary section-space-default">
-    <div class="container">
-        <h2 class="title-default">Let's Check Out Our Newest Release Prodcuts</h2>
-    </div>
-    <div class="container-fluid" id="isotope-container">
-        <div class="isotope-classes-tab isotop-box-btn-white">
 
-            <a href="#" data-filter="*" class="current">All</a>
-            <a href="#" data-filter=".wordpress">WordPress</a>
-            <a href="#" data-filter=".joomla">Joomla</a>
-            <a href="#" data-filter=".plugins">Plugins</a>
-            <a href="#" data-filter=".component">Component</a>
-            <a href="#" data-filter=".psd">PSD</a>
-        </div>
-        <div class="row featuredContainer">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 joomla plugins component">
-                <div class="single-item-grid">
-                    <div class="item-img">
-                        <img src="img\product\12.jpg" alt="product" class="img-responsive">
-                        <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="item-content">
-                        <div class="item-info">
-                            <h3><a href="#">Team Component Pro</a></h3>
-                            <span>Joomla Component</span>
-                            <div class="price">$15</div>
-                        </div>
-                        <div class="item-profile">
-                            <div class="profile-title">
-                                <div class="img-wrapper"><img src="img\profile\1.jpg" alt="profile"
-                                        class="img-responsive img-circle"></div>
-                                <span>PsdBosS</span>
-                            </div>
-                            <div class="profile-rating">
-                                <ul>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li>(<span> 05</span> )</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wordpress plugins">
-                <div class="single-item-grid">
-                    <div class="item-img">
-                        <img src="img\product\13.jpg" alt="product" class="img-responsive">
-                        <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="item-content">
-                        <div class="item-info">
-                            <h3><a href="#">Team Component Pro</a></h3>
-                            <span>Joomla Component</span>
-                            <div class="price">$15</div>
-                        </div>
-                        <div class="item-profile">
-                            <div class="profile-title">
-                                <div class="img-wrapper"><img src="img\profile\1.jpg" alt="profile"
-                                        class="img-responsive img-circle"></div>
-                                <span>PsdBosS</span>
-                            </div>
-                            <div class="profile-rating">
-                                <ul>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li>(<span> 05</span> )</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 joomla component">
-                <div class="single-item-grid">
-                    <div class="item-img">
-                        <img src="img\product\14.jpg" alt="product" class="img-responsive">
-                        <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="item-content">
-                        <div class="item-info">
-                            <h3><a href="#">Team Component Pro</a></h3>
-                            <span>Joomla Component</span>
-                            <div class="price">$15</div>
-                        </div>
-                        <div class="item-profile">
-                            <div class="profile-title">
-                                <div class="img-wrapper"><img src="img\profile\1.jpg" alt="profile"
-                                        class="img-responsive img-circle"></div>
-                                <span>PsdBosS</span>
-                            </div>
-                            <div class="profile-rating">
-                                <ul>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li>(<span> 05</span> )</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wordpress joomla plugins">
-                <div class="single-item-grid">
-                    <div class="item-img">
-                        <img src="img\product\15.jpg" alt="product" class="img-responsive">
-                        <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="item-content">
-                        <div class="item-info">
-                            <h3><a href="#">Team Component Pro</a></h3>
-                            <span>Joomla Component</span>
-                            <div class="price">$15</div>
-                        </div>
-                        <div class="item-profile">
-                            <div class="profile-title">
-                                <div class="img-wrapper"><img src="img\profile\1.jpg" alt="profile"
-                                        class="img-responsive img-circle"></div>
-                                <span>PsdBosS</span>
-                            </div>
-                            <div class="profile-rating">
-                                <ul>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li>(<span> 05</span> )</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wordpress">
-                <div class="single-item-grid">
-                    <div class="item-img">
-                        <img src="img\product\16.jpg" alt="product" class="img-responsive">
-                        <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="item-content">
-                        <div class="item-info">
-                            <h3><a href="#">Team Component Pro</a></h3>
-                            <span>Joomla Component</span>
-                            <div class="price">$15</div>
-                        </div>
-                        <div class="item-profile">
-                            <div class="profile-title">
-                                <div class="img-wrapper"><img src="img\profile\1.jpg" alt="profile"
-                                        class="img-responsive img-circle"></div>
-                                <span>PsdBosS</span>
-                            </div>
-                            <div class="profile-rating">
-                                <ul>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li>(<span> 05</span> )</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wordpress joomla psd">
-                <div class="single-item-grid">
-                    <div class="item-img">
-                        <img src="img\product\17.jpg" alt="product" class="img-responsive">
-                        <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="item-content">
-                        <div class="item-info">
-                            <h3><a href="#">Team Component Pro</a></h3>
-                            <span>Joomla Component</span>
-                            <div class="price">$15</div>
-                        </div>
-                        <div class="item-profile">
-                            <div class="profile-title">
-                                <div class="img-wrapper"><img src="img\profile\1.jpg" alt="profile"
-                                        class="img-responsive img-circle"></div>
-                                <span>PsdBosS</span>
-                            </div>
-                            <div class="profile-rating">
-                                <ul>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li>(<span> 05</span> )</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 component">
-                <div class="single-item-grid">
-                    <div class="item-img">
-                        <img src="img\product\18.jpg" alt="product" class="img-responsive">
-                        <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="item-content">
-                        <div class="item-info">
-                            <h3><a href="#">Team Component Pro</a></h3>
-                            <span>Joomla Component</span>
-                            <div class="price">$15</div>
-                        </div>
-                        <div class="item-profile">
-                            <div class="profile-title">
-                                <div class="img-wrapper"><img src="img\profile\1.jpg" alt="profile"
-                                        class="img-responsive img-circle"></div>
-                                <span>PsdBosS</span>
-                            </div>
-                            <div class="profile-rating">
-                                <ul>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li>(<span> 05</span> )</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 wordpress psd">
-                <div class="single-item-grid">
-                    <div class="item-img">
-                        <img src="img\product\19.jpg" alt="product" class="img-responsive">
-                        <div class="trending-sign" data-tips="Trending"><i class="fa fa-bolt" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="item-content">
-                        <div class="item-info">
-                            <h3><a href="#">Team Component Pro</a></h3>
-                            <span>Joomla Component</span>
-                            <div class="price">$15</div>
-                        </div>
-                        <div class="item-profile">
-                            <div class="profile-title">
-                                <div class="img-wrapper"><img src="img\profile\1.jpg" alt="profile"
-                                        class="img-responsive img-circle"></div>
-                                <span>PsdBosS</span>
-                            </div>
-                            <div class="profile-rating">
-                                <ul>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li>(<span> 05</span> )</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <ul class="btn-area">
-                <li class="hvr-bounce-to-right"><a href="#">All New Items</a></li>
-                <li class="hvr-bounce-to-left"><a href="#">Popular Items</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- Newest Products Area End Here -->
+
 <!-- Trending Products Area Start Here -->
 <div class="trending-products-area section-space-default">
     <div class="container">
-        <h2 class="title-default">This Week Trending Products</h2>
+        <h2 class="title-default">Cok Satanlar</h2>
     </div>
     <div class="container=fluid">
         <div class="fox-carousel dot-control-textPrimary" data-loop="true" data-items="4" data-margin="30"
@@ -505,6 +217,94 @@
     </div>
 </div>
 <!-- Trending Products Area End Here -->
+
+<!-- Newest Products Area Start Here -->
+<div class="newest-products-area bg-secondary section-space-default">
+    <div class="container">
+        <h2 class="title-default">One Cikan Urunler</h2>
+    </div>
+    <div class="container-fluid" id="isotope-container">
+        <div class="isotope-classes-tab isotop-box-btn-white">
+
+
+        </div>
+
+        <div class="row featuredContainer">
+
+
+
+            <?php
+            //Belirli veriyi seçme işlemi
+            $urunsor = $db->prepare("SELECT urun.urun_ad,urun.kategori_id,urun.urun_id,urun.urun_fiyat,urun.urunfoto_resimyol,
+            urun.kullanici_id,urun.urun_durum,urun.urun_onecikar,kategori.kategori_id,kategori.kategori_ad,kullanici.kullanici_id,
+            kullanici.kullanici_ad,kullanici.kullanici_soyad,kullanici.kullanici_magazafoto 
+            FROM urun INNER JOIN kategori ON urun.kategori_id=kategori.kategori_id INNER JOIN kullanici ON
+            urun.kullanici_id=kullanici.kullanici_id where urun_onecikar=:onecikar and urun_durum=:durum
+            order by urun_zaman,urun_onecikar DESC limit 8");
+            $urunsor->execute(
+                array(
+                    "onecikar" => 1,
+                    "durum" => 1
+                )
+            );
+
+            while ($uruncek = $urunsor->fetch(PDO::FETCH_ASSOC)) { ?>
+
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 yenigelenler plugins">
+                    <div class="single-item-grid">
+                        <div class="item-img">
+                            <img src="<?php echo $uruncek["urunfoto_resimyol"] ?>" alt="product" class="img-responsive">
+                            <div class="trending-sign" data-tips="One Cikan Urun"><i class="fa fa-bolt"
+                                    aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-info">
+                                <h3><a href="#">
+                                        <?php echo $uruncek["urun_ad"] ?>
+                                    </a></h3>
+                                <span>
+                                    <?php echo $uruncek["kategori_ad"] ?>
+                                </span>
+                                <div class="price">
+                                    <?php echo $uruncek["urun_fiyat"] ?>TL
+                                </div>
+                            </div>
+                            <div class="item-profile">
+                                <div class="profile-title">
+                                    <div class="img-wrapper"><img style="width: 38px; height: 38px; "
+                                            src="<?php echo $uruncek["kullanici_magazafoto"] ?>" alt="profile"
+                                            class="img-responsive img-circle"></div>
+                                    <span>
+                                        <?php echo $uruncek["kullanici_ad"] . " " . $uruncek["kullanici_soyad"] ?>
+                                    </span>
+                                </div>
+                                <div class="profile-rating">
+                                    <ul>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li>(<span> 05</span> )</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <?php } ?>
+
+
+
+
+        </div>
+    </div>
+</div>
+<!-- Newest Products Area End Here -->
+
 <!-- Why Choose Area Start Here -->
 <div class="why-choose-area bg-primaryText section-space-default">
     <div class="container">

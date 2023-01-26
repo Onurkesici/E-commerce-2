@@ -1,9 +1,9 @@
-<?php 
+<?php
 
-include 'header.php'; 
+include 'header.php';
 
 //Belirli veriyi seçme işlemi
-$urunsor=$db->prepare("SELECT * FROM urun order by urun_id DESC");
+$urunsor = $db->prepare("SELECT * FROM urun order by urun_id DESC");
 $urunsor->execute();
 
 
@@ -21,22 +21,22 @@ $urunsor->execute();
           <div class="x_title">
             <h2>Ürün Listeleme <small>,
 
-              <?php 
+                <?php
 
-              if ($_GET['durum']=="ok") {?>
+                if ($_GET['durum'] == "ok") { ?>
 
-              <b style="color:green;">İşlem Başarılı...</b>
+                  <b style="color:green;">İşlem Başarılı...</b>
 
-              <?php } elseif ($_GET['durum']=="no") {?>
+                <?php } elseif ($_GET['durum'] == "no") { ?>
 
-              <b style="color:red;">İşlem Başarısız...</b>
+                  <b style="color:red;">İşlem Başarısız...</b>
 
-              <?php }
+                <?php }
 
-              ?>
+                ?>
 
 
-            </small></h2>
+              </small></h2>
 
             <div class="clearfix"></div>
 
@@ -50,15 +50,14 @@ $urunsor->execute();
 
             <!-- Div İçerik Başlangıç -->
 
-            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
+              cellspacing="0" width="100%">
               <thead>
                 <tr>
                   <th>S.No</th>
                   <th>Ürün Ad</th>
-                  <th>Ürün Stok</th>
                   <th>Ürün Fiyat</th>
-                  <th>Resim İşlemleri</th>
-                  <th>Öne Çıkar</th>
+                  <th>Öne Çikar</th>
                   <th>Durum</th>
                   <th></th>
                   <th></th>
@@ -67,93 +66,113 @@ $urunsor->execute();
 
               <tbody>
 
-                <?php 
+                <?php
 
-                $say=0;
+                $say = 0;
 
-                while($uruncek=$urunsor->fetch(PDO::FETCH_ASSOC)) { $say++?>
-
-
-                <tr>
-                 <td width="20"><?php echo $say ?></td>
-                 <td><?php echo $uruncek['urun_ad'] ?></td>
-                 <td><?php echo $uruncek['urun_stok'] ?></td>
-                 <td><?php echo $uruncek['urun_fiyat'] ?></td>
-                 <td><center><a href="urun-galeri.php?urun_id=<?php echo $uruncek['urun_id'] ?>"><button class="btn btn-success btn-xs">Resim İşlemleri</button></a></center></td>
-                 <td><center><?php 
-
-                 if ($uruncek['urun_onecikar']==0) {?>
-
-                 <a href="../netting/islem.php?urun_id=<?php echo $uruncek['urun_id'] ?>&urun_one=1&urun_onecikar=ok"><button class="btn btn-success btn-xs">Ön Çıkar</button></a>
-                   
-
-                 <?php } elseif ($uruncek['urun_onecikar']==1) {?>
+                while ($uruncek = $urunsor->fetch(PDO::FETCH_ASSOC)) {
+                  $say++ ?>
 
 
-                 <a href="../netting/islem.php?urun_id=<?php echo $uruncek['urun_id'] ?>&urun_one=0&urun_onecikar=ok"><button class="btn btn-warning btn-xs">Kaldır</button></a>
+                  <tr>
+                    <td width="20">
+                      <?php echo $say ?>
+                    </td>
+                    <td>
+                      <?php echo $uruncek['urun_ad'] ?>
+                    </td>
+                    <td>
+                      <?php echo $uruncek['urun_fiyat'] ?>
+                    </td>
+                    <td>
+                      <center>
+                        <?php
 
-                   <?php } ?>
-                     
+                        if ($uruncek['urun_onecikar'] == 0) { ?>
 
-                   </center></td>
-               
-
-                 <td><center><?php 
-
-                  if ($uruncek['urun_durum']==1) {?>
-
-                  <button class="btn btn-success btn-xs">Aktif</button>
-
-                  <!--
-
-                  success -> yeşil
-                  warning -> turuncu
-                  danger -> kırmızı
-                  default -> beyaz
-                  primary -> mavi buton
-
-                  btn-xs -> ufak buton 
-
-                -->
-
-                <?php } else {?>
-
-                <button class="btn btn-danger btn-xs">Pasif</button>
+                          <a
+                            href="../netting/islem.php?urun_id=<?php echo $uruncek['urun_id'] ?>&urun_one=1&urun_onecikar=ok"><button
+                              class="btn btn-success btn-xs">Ön Çıkar</button></a>
 
 
-                <?php } ?>
-              </center>
+                        <?php } elseif ($uruncek['urun_onecikar'] == 1) { ?>
 
 
-            </td>
+                          <a 
+                            href="../netting/islem.php?urun_id=<?php echo $uruncek['urun_id'] ?>&urun_one=0&urun_onecikar=ok"><button
+                              class="btn btn-warning btn-xs">Kaldır</button></a>
+
+                        <?php } ?>
 
 
-            <td><center><a href="urun-duzenle.php?urun_id=<?php echo $uruncek['urun_id']; ?>"><button class="btn btn-primary btn-xs">Düzenle</button></a></center></td>
-            <td><center><a href="../netting/islem.php?urun_id=<?php echo $uruncek['urun_id']; ?>&urunsil=ok"><button class="btn btn-danger btn-xs">Sil</button></a></center></td>
-          </tr>
+                      </center>
+                    </td>
+
+
+                    <td>
+                      <center>
+                        <?php
+
+                        if ($uruncek['urun_durum'] == 1) { ?>
+
+                          <button class="btn btn-success btn-xs">Aktif</button>
+
+                          <!--
+
+                      success -> yeşil
+                      warning -> turuncu
+                      danger -> kırmızı
+                      default -> beyaz
+                      primary -> mavi buton
+
+                      btn-xs -> ufak buton 
+
+                    -->
+
+                        <?php } else { ?>
+
+                          <button class="btn btn-danger btn-xs">Pasif</button>
+
+
+                        <?php } ?>
+                      </center>
+
+
+                    </td>
+
+
+                    <td>
+                      <center><a href="urun-duzenle.php?urun_id=<?php echo $uruncek['urun_id']; ?>"><button
+                            class="btn btn-primary btn-xs">Düzenle</button></a></center>
+                    </td>
+                    <td> 
+                      <center><a onclick="return confirm('Bu urunu silmek istiyor musunuz?')" href="../netting/islem.php?urun_id=<?php echo $uruncek['urun_id']; ?>&urunsil=ok"><button
+                            class="btn btn-danger btn-xs">Sil</button></a></center>
+                    </td>
+                  </tr>
 
 
 
-          <?php  }
+                <?php }
 
-          ?>
-
-
-        </tbody>
-      </table>
-
-      <!-- Div İçerik Bitişi -->
+                ?>
 
 
+              </tbody>
+            </table>
+
+            <!-- Div İçerik Bitişi -->
+
+
+          </div>
+        </div>
+      </div>
     </div>
+
+
+
+
   </div>
-</div>
-</div>
-
-
-
-
-</div>
 </div>
 <!-- /page content -->
 
